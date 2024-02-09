@@ -15,7 +15,8 @@ public:
         ListNode* tail = dummyHead;
         int carry = 0;
 
-        while (l1 != nullptr || l2 != nullptr || carry != 0) {
+        while (l1 != nullptr || l2 != nullptr || carry != 0)
+        {
             int digit1 = (l1 != nullptr) ? l1->val : 0;
             int digit2 = (l2 != nullptr) ? l2->val : 0;
 
