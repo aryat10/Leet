@@ -14,14 +14,14 @@ public:
     ListNode* reverseList(ListNode* head) {
 
         ListNode* pre = NULL;
-        ListNode* curr = head;
+        ListNode* temp = head;
 
-        while(curr != NULL){
-            ListNode* forward = curr->next;
-            curr->next = pre;
-            pre = curr;
-            curr = forward;
-            
+        while(temp != NULL)
+        {
+            ListNode* fro = temp->next;
+            temp->next = pre;
+            pre = temp;                          // What we actually did was we just reversed the nodes that were linked tp evry node 
+            curr = fro;                  
         }
         return pre;
     }
