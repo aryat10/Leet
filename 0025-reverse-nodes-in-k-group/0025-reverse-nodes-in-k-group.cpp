@@ -49,3 +49,70 @@ public:
         return head;
     }
 };
+
+
+
+
+
+
+
+
+
+// Method 2
+
+
+class Solution {
+public :       
+ListNode* kReverse(ListNode* head, int k) {
+
+    // Write your code here.
+
+    int size = 0;
+
+    ListNode *curr = head;
+
+    while(curr){
+
+        curr = curr -> next;
+
+        size++;
+
+    }
+
+    if(size<k){
+
+        return head;
+
+    }
+
+    ListNode *prev = NULL;
+
+    ListNode *next = head;
+
+    curr = NULL;
+
+    int count = 0;
+
+    while(next && k>count){
+
+        count++;
+
+        curr = next;
+
+        next = curr -> next;
+
+        curr -> next = prev;
+
+        prev = curr;
+
+    }
+
+    if(next){
+
+        head -> next = kReverse(next, k);
+
+    }
+
+    return prev;
+}
+}
