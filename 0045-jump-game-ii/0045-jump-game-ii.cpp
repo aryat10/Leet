@@ -2,10 +2,10 @@ class Solution {
 public:
     int func(int ind, vector<int>& nums, vector<int>& dp) {
         if (ind >= nums.size() - 1) 
-            return 0;  // If we're at or past the last index, no more jumps are needed
+            return 0;  
 
         if (dp[ind] != -1) 
-            return dp[ind];  // If already computed, return the stored result
+            return dp[ind];  
 
         int mini = INT_MAX;
         for (int i = 1; i <= nums[ind]; i++) {
