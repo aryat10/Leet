@@ -5,7 +5,7 @@ public:
     int left = 0; // Left boundary of the sliding window
     int maxFruits = 0; // Variable to track the maximum number of fruits collected
 
-    for (int right = 0; right < fruits.size(); ++right) {
+    for (int right = 0; right < fruits.size(); right++) {
         fruitCount[fruits[right]]++; // Add the current fruit to the map
 
         // If there are more than two types of fruits in the window, shrink it
